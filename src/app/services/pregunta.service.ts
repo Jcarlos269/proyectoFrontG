@@ -33,7 +33,8 @@ export class PreguntaService {
     return this.http.get(`${baseUrl}/api/v1/questions/getQuestionsFromExam/${examId}`);
   }
 
-  public evaluarExamen(examId:any,preguntas:any){
-    return this.http.post(`${baseUrl}/api/v1/questions/${examId}/evaluate`,preguntas);
+  public evaluarExamen(preguntas:any){
+    return this.http.post(`${baseUrl}/api/v1/exams/evaluate-exam`,preguntas);
   }
+  
 }

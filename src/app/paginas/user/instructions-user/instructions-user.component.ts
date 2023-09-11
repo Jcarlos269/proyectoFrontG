@@ -12,15 +12,15 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class InstructionsUserComponent implements OnInit{
 
   examenId:any;
-  examen:any;
+  examen:any = new Object();
 
   firstVideo: any;
   youtubeLink: any;
-  prueba:any;
+  
 
   constructor(private examenService:ExamenService, private route:ActivatedRoute, private router:Router,private cdRef: ChangeDetectorRef,
     private sanitizer: DomSanitizer){
-    //this.firstVideo = 'hambreCero.mp4';
+   
   }
 
   ngOnInit(): void {

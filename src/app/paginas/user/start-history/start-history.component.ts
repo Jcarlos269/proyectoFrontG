@@ -35,10 +35,11 @@ export class StartHistoryComponent implements OnInit {
       (data:any)=>{
         console.log(data);
         this.preguntas=data;
-
+        this.timer = this.preguntas.length *2 *60;
         this.preguntas.forEach((p:any)=>{
           p['answer'] = '';
         })
+        this.iniciarTemporizador();
       },
       (error) =>{
         console.log(error);
@@ -63,7 +64,7 @@ export class StartHistoryComponent implements OnInit {
       icon:'info'
     }).then((e) => {
       if(e.isConfirmed){
-        this.evaluaarExamen();
+        this.evaluarExamen();
       }
     })
   }
@@ -71,7 +72,7 @@ export class StartHistoryComponent implements OnInit {
   iniciarTemporizador(){
     let t = window.setInterval(() => {
       if(this.timer <= 0){
-        this.evaluaarExamen();
+        this.evaluarExamen();
         clearInterval(t);
       }else{
         this.timer --;
@@ -85,13 +86,13 @@ export class StartHistoryComponent implements OnInit {
     return `${mm} : min : ${ss} seg`;
   }
 
-  evaluaarExamen(){
-    this.preguntasService.evaluarExamen(this.examId,this.preguntas).subscribe(
+  evaluarExamen(){
+    this.preguntasService.evaluarExamen(this.preguntas).subscribe(
       (data:any) => {
         console.log("esta es la data de evaluar: ",data);
-        this.puntosConseguidos = data.puntosMaximos;
-        this.respuestasCorrectas = data.respuestasCorrectas;
-        this.intentos = data.intentos;
+        this.puntosConseguidos = data.maximumPoints;
+        this.respuestasCorrectas = data.correctAnswers;
+        this.intentos = data.attempts;
         this.esEnviado = true;
       },
       (error) => {

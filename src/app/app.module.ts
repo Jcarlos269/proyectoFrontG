@@ -32,6 +32,7 @@ import { CategoryExamComponent } from './paginas/admin/category-exam/category-ex
 import { HistoryExamComponent } from './paginas/user/history-exam/history-exam.component';
 import { InstructionsUserComponent } from './paginas/user/instructions-user/instructions-user.component';
 import { StartHistoryComponent } from './paginas/user/start-history/start-history.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { StartHistoryComponent } from './paginas/user/start-history/start-histor
     MatFormFieldModule,
     MatButtonModule,
     MatListModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    BrowserAnimationsModule
     //NgxUiLoaderModule,
     //NgxUiLoaderHttpModule
 
