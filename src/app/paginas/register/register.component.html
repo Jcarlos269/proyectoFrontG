@@ -1,0 +1,31 @@
+<body>
+    <img class="wave" src="assets/wave.png">
+    <div class="container">
+      <div class="title">Registra tu cuenta !</div>
+      <div class="content">
+        <form (ngSubmit) = "forSubmit()">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Nombres </span>
+              <input required [(ngModel)] = "user.firstname" name = "firstname"  placeholder="Digite su nombre de usuario">
+            </div>
+            <div class="input-box">
+                <span class="details">Apellido</span>
+                <input required [(ngModel)] = "user.lastname" name = "lastname" placeholder="Digite su Apellido">
+              </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input required [(ngModel)] = "user.email" name = "email" type="email" placeholder="Digite su email">
+            </div>
+            <div class="input-box">
+              <span class="details">Contraseña</span>
+              <input required [(ngModel)] = "user.password"  name = "password" type = "password" placeholder="Digite su Contraseña">
+            </div>
+          </div>
+          <div class="button">
+            <input type="submit" value="Registrarse">
+          </div>
+        </form>
+      </div>
+    </div>
+</body>

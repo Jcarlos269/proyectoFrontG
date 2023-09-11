@@ -1,0 +1,30 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <mat-card class="mt20">
+          <mat-card-header>
+            <mat-card-title>
+              Aventura Sostenible
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="ml30">
+            <mat-divider></mat-divider>
+          <br>
+          <h1>Descripcion de la Increible Aventura</h1>
+          <video width="1020" height="540" controls>
+              <source [src]="categoria" type="video/mp4">
+          </video>
+          <mat-divider></mat-divider>
+          <br>
+        </mat-card-content>
+        <mat-card-actions class="text-center mb20">
+          <button mat-raised-button color="primary" [routerLink]="'/user-dashboard/category-exam/'+c.id" *ngFor = "let c of categorias">
+            <mat-icon mat-list-icon>account_circle</mat-icon> {{c.name}}
+          </button>
+        </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
