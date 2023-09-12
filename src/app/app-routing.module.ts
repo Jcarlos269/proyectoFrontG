@@ -20,7 +20,11 @@ import { StartHistoryComponent } from './paginas/user/start-history/start-histor
 import { HomeUserComponent } from './paginas/user/home-user/home-user.component';
 
 const routes: Routes = [
-  
+  {
+    path:'',
+    redirectTo: '/login', 
+    pathMatch: 'full'
+  },
   {path: 'register',
   component:RegisterComponent,
   pathMatch : 'full'
