@@ -32,7 +32,7 @@ export class LoginComponent {
             this.loginService.loginStatus.next(true);
           }else if (this.loginService.getUserRole()=='USER'){
             //window.location.href = '/user-dashboard'; 
-            this.router.navigate(['user-dashboard']);
+            this.router.navigate(['user-dashboard/home-user']);
             this.loginService.loginStatus.next(true);
           }else{
             this.loginService.logout();

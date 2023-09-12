@@ -79,10 +79,12 @@
             <h1>Respuestas correctas : {{ respuestasCorrectas }}</h1>
           </mat-card-content>
           <mat-card-actions class="text-center">
-            <iframe [src]="youtubeUrl" width="680" height="400" frameborder="0" allowfullscreen></iframe>
             <button mat-raised-button color="accent" [routerLink] = "'/user-dashboard/home-user'">Inicio</button>
+            
           </mat-card-actions>
+
         </mat-card>
+        <iframe [src]="youtubeUrl" width="680" height="400" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>

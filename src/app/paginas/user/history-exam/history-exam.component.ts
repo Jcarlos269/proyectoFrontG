@@ -21,7 +21,7 @@ export class HistoryExamComponent implements OnInit{
         console.log("cargando la historia");
         this.examenService.listarCuestionarios().subscribe(
           (data)=>{
-            //this.examenes =data;d
+            this.examenes =data;
             //this.examenes = data.sort((a: any, b: any) => a.title.localeCompare(b.title));
             console.log(this.examenes); 
           },

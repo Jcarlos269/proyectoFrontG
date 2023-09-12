@@ -34,6 +34,7 @@ export class StartHistoryComponent implements OnInit {
     this.examId = this.route.snapshot.params['examId'];
     console.log(this.examId);
     this.cargarPreguntas();
+    this.cargarExamenParaVideo();
   }
 
   cargarPreguntas(){
