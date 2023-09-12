@@ -6,9 +6,9 @@
             <mat-card-content>
               <h3><b>Instrucciones</b></h3>
               <ul>
-                <li>No actualice la página, de lo contrario obtendrá nuevas preguntas en este cuestionario</li>
-                <li>No cambies las pestañas</li>
-                <li>No minimices la ventana</li>
+                <li>No actualice la página</li>
+                <li>No puedes devolverte</li>
+                <li>No quites la ventana</li>
               </ul>
             </mat-card-content>
           </mat-card>
@@ -46,7 +46,6 @@
         </div>
         <div class="col-md-3">
 
-
           <mat-card style ="margin-top:70px;">
             <mat-card-header>
               <mat-card-title>
@@ -80,7 +79,8 @@
             <h1>Respuestas correctas : {{ respuestasCorrectas }}</h1>
           </mat-card-content>
           <mat-card-actions class="text-center">
-            <button mat-raised-button color="accent" [routerLink] = "'/user-dashboard'">Inicio</button>
+            <iframe [src]="youtubeUrl" width="680" height="400" frameborder="0" allowfullscreen></iframe>
+            <button mat-raised-button color="accent" [routerLink] = "'/user-dashboard/home-user'">Inicio</button>
           </mat-card-actions>
         </mat-card>
       </div>

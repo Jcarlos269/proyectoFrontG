@@ -15,9 +15,12 @@ export class InstructionsUserComponent implements OnInit{
   examen:any = new Object();
 
   firstVideo: any;
-  youtubeLink: any;
+  //firebaseLink: string = 'https://firebasestorage.googleapis.com/v0/b/proyectodegradog-h.appspot.com/o/hambreCero.mp4?alt=media&token=7bdee123-3c85-453f-9f80-6787967ad7aa';
   
-
+  youtubeLink: string=''; // Tu enlace de YouTube desde la base de datos
+  //youtubeUrl: SafeResourceUrl = '';
+  youtubeVideoId: string =''; 
+  youtubeUrl: SafeResourceUrl = '';
   constructor(private examenService:ExamenService, private route:ActivatedRoute, private router:Router,private cdRef: ChangeDetectorRef,
     private sanitizer: DomSanitizer){
    
@@ -29,11 +32,11 @@ export class InstructionsUserComponent implements OnInit{
       (data:any)=>{
         console.log(data);
         this.examen = data;
-        this.firstVideo = 'assets/'+data.firstVideo;
-        //console.log(this.videoYotube);
-        //console.log("este es el quemado "+ this.firstVideo);
-        console.log("Valor recuperado de la base de datos:", this.firstVideo);
-        //this.cdRef.detectChanges();
+        this.youtubeLink = data.firstVideo; // Reemplaza 'youtubeLink' con el campo real de tu base de datos
+        this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.youtubeLink);
+        //this.firebaseLink = data.firebaseLink;
+        //this.firstVideo = 'assets/'+data.firstVideo;
+        console.log("Valor recuperado de la base de datos:", this.youtubeUrl);
         
       },
       (error)=>{

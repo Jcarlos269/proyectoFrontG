@@ -1,6 +1,8 @@
 import { LocationStrategy } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { ExamenService } from 'src/app/services/examen.service';
 import { PreguntaService } from 'src/app/services/pregunta.service';
 import Swal from 'sweetalert2';
 
@@ -16,11 +18,15 @@ export class StartHistoryComponent implements OnInit {
   puntosConseguidos = 0;
   respuestasCorrectas = 0;
   intentos = 0;
+  examen:any = new Object();
+  youtubeLink: string='';
+  youtubeVideoId: string =''; 
+  youtubeUrl: SafeResourceUrl = '';
 
   esEnviado = false;
   timer:any;
 
-  constructor(private locationSt:LocationStrategy,private route:ActivatedRoute, private preguntasService:PreguntaService){}
+  constructor(private locationSt:LocationStrategy,private route:ActivatedRoute, private preguntasService:PreguntaService, private examenService:ExamenService, private sanitizer: DomSanitizer){}
 
 
   ngOnInit(): void {
@@ -43,6 +49,25 @@ export class StartHistoryComponent implements OnInit {
       },
       (error) =>{
         console.log(error);
+      }
+    )
+  }
+
+  cargarExamenParaVideo(){
+    this.examId = this.route.snapshot.params['examId'];
+    this.examenService.obtenerExamen(this.examId).subscribe(
+      (data:any)=>{
+        console.log(data);
+        this.examen = data;
+        this.youtubeLink = data.secondVideo; // Reemplaza 'youtubeLink' con el campo real de tu base de datos
+        this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.youtubeLink);
+        //this.firebaseLink = data.firebaseLink;
+        //this.firstVideo = 'assets/'+data.firstVideo;
+        console.log("Valor recuperado de la base de datos:", this.youtubeUrl);
+        
+      },
+      (error)=>{
+        console.log(error)
       }
     )
   }

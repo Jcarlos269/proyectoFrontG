@@ -17,6 +17,7 @@ import { CategoryExamComponent } from './paginas/admin/category-exam/category-ex
 import { HistoryExamComponent } from './paginas/user/history-exam/history-exam.component';
 import { InstructionsUserComponent } from './paginas/user/instructions-user/instructions-user.component';
 import { StartHistoryComponent } from './paginas/user/start-history/start-history.component';
+import { HomeUserComponent } from './paginas/user/home-user/home-user.component';
 
 const routes: Routes = [
   
@@ -54,6 +55,10 @@ const routes: Routes = [
   component:UserDashboardComponent,
   canActivate:[NormalGuard],
   children:[
+    {
+      path:'home-user',
+      component:HomeUserComponent
+    },
     {
       path:'instructions-admin',
       component:InstructionsAdminComponent

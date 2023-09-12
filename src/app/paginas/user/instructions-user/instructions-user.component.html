@@ -8,20 +8,15 @@
                 Esta es la mejor aventura de todo el mundo!
               </mat-card-title>
             </mat-card-header>
-            <video width="1020" height="540" controls>
-                <source [src]="firstVideo" type="video/mp4">
-            </video>
+            <iframe [src]="youtubeUrl" width="680" height="400" frameborder="0" allowfullscreen></iframe>
             <mat-card-content class="ml30">
-              <h1>{{ examen.firstVideo }}</h1>
+              
               <p>{{ examen.description }}</p>
               <mat-divider></mat-divider>
             <br>
             <h1>Instrucciones importantes</h1>
             <ul>
-              <li>Este cuestionario es solo para fines de práctica</li>
-              <li>Tienes que enviar el cuestionario en <b>{{ examen.numberQuestions * 2 }} minutos</b></li>
-              <li>Puede intentar el cuestionario cualquier cantidad de veces</li>
-              <li>Hay <b>{{ examen.maxScore/examen.numberQuestions }} puntos por pregunta</b></li>
+              <li>Este cuestionario es solo para fines de práctica y de diversion pura la historia es un gran complemento </li>
             </ul>
             <mat-divider></mat-divider>
             <br>

@@ -1,0 +1,30 @@
+header {
+     /* Color de fondo del encabezado */
+    color: #000; /* Color del texto del encabezado */
+    text-align: left;
+    padding: 20px;
+}
+
+/* Estilo para el título */
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Estilo para el contenedor del GIF */
+.gif-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo para el GIF */
+img {
+    max-width: 100%; /* Asegura que el GIF se ajuste al ancho del contenedor */
+}
+
+
+
+
+
+
+

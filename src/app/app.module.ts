@@ -33,6 +33,7 @@ import { HistoryExamComponent } from './paginas/user/history-exam/history-exam.c
 import { InstructionsUserComponent } from './paginas/user/instructions-user/instructions-user.component';
 import { StartHistoryComponent } from './paginas/user/start-history/start-history.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeUserComponent } from './paginas/user/home-user/home-user.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CategoryExamComponent,
     HistoryExamComponent,
     InstructionsUserComponent,
-    StartHistoryComponent
+    StartHistoryComponent,
+    HomeUserComponent
 
   ],
   imports: [

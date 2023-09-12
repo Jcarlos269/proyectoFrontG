@@ -13,8 +13,7 @@
            		   		<i class="fas fa-user"></i>
            		   </div>
            		   <div class="div">
-           		   		<h5>Usuario</h5>
-           		   		<input [(ngModel)]="loginData.email" name="email" required type="text" class="input">
+           		   		<input [(ngModel)]="loginData.email" name="email" required type="text" class="input" placeholder="Email">
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -22,8 +21,7 @@
            		    	<i class="fas fa-lock"></i>
            		   </div>
            		   <div class="div">
-           		    	<h5>Contraseña</h5>
-           		    	<input [(ngModel)]="loginData.password" name="password" required type="password" class="input">
+           		    	<input [(ngModel)]="loginData.password" name="password" required type="password" class="input" placeholder="Contraseña">
             	   </div>
             	</div>
             	<input type="submit" class="btn" value="Login">
