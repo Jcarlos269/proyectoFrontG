@@ -35,6 +35,11 @@ import { StartHistoryComponent } from './paginas/user/start-history/start-histor
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeUserComponent } from './paginas/user/home-user/home-user.component';
 
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
+import { ScriptsCargaService } from './services/scripts-carga.service';
+import { MemoryGameComponent } from './paginas/user/memory-game/memory-game.component';
+import { HangedGameComponent } from './paginas/user/hanged-game/hanged-game.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +59,9 @@ import { HomeUserComponent } from './paginas/user/home-user/home-user.component'
     HistoryExamComponent,
     InstructionsUserComponent,
     StartHistoryComponent,
-    HomeUserComponent
+    HomeUserComponent,
+    MemoryGameComponent,
+    HangedGameComponent
 
   ],
   imports: [
@@ -72,7 +79,8 @@ import { HomeUserComponent } from './paginas/user/home-user/home-user.component'
     MatButtonModule,
     MatListModule,
     MatProgressSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DragDropModule
     //NgxUiLoaderModule,
     //NgxUiLoaderHttpModule
 

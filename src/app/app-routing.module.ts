@@ -18,6 +18,8 @@ import { HistoryExamComponent } from './paginas/user/history-exam/history-exam.c
 import { InstructionsUserComponent } from './paginas/user/instructions-user/instructions-user.component';
 import { StartHistoryComponent } from './paginas/user/start-history/start-history.component';
 import { HomeUserComponent } from './paginas/user/home-user/home-user.component';
+import { MemoryGameComponent } from './paginas/user/memory-game/memory-game.component';
+import { HangedGameComponent } from './paginas/user/hanged-game/hanged-game.component';
 
 const routes: Routes = [
   {
@@ -62,6 +64,14 @@ const routes: Routes = [
     {
       path:'home-user',
       component:HomeUserComponent
+    },
+    {
+      path:'memoryGame',
+      component:MemoryGameComponent
+    },
+    {
+      path:'hangedGame',
+      component:HangedGameComponent
     },
     {
       path:'instructions-admin',

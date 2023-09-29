@@ -1,31 +1,38 @@
 <mat-toolbar color="primary">
-  <a [routerLink]="'/'" mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon">
+  <a  mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon">
     <mat-icon>menu_books</mat-icon>
   </a>
   <span>Aventura Sostenible</span>
   <span class="example-spacer"></span>
   <a
-    *ngIf = "!isLoggedIn"
-    [routerLink]="'/login'"
-    mat-icon-button
-    class = "example-icon favorite-icon"
-    aria-label = "Example icon-button with heart icon">
-    Iniciar sesión
-  </a>
+  *ngIf="!isLoggedIn"
+  [routerLink]="'/login'"
+  mat-icon-button
+  class="example-icon favorite-icon"
+  aria-label="Example icon-button with heart icon"
+  style="display: flex; align-items: center; margin-right: 50px;">
+  <span class="material-icons">login</span>
+  <span style="margin-left: 20px;">Iniciar sesión</span>
+</a>
   <a
     *ngIf = "!isLoggedIn"
     [routerLink]="'/register'"
     mat-icon-button
     class="example-icon favorite-icon mr20 ml70"
-    aria-label="Example icon-button with heart icon">
-    Registrar
+    aria-label="Example icon-button with heart icon"
+    style="display: flex; align-items: center; margin-right: 50px;">
+    <span class="material-icons">how_to_reg</span>
+    <span style="vertical-align: middle; margin-left: 8px;">Registrar</span>
   </a>
-  <a
-    *ngIf = "isLoggedIn"
-    (click) = "logout()"
-    style="margin-right: 150px; width: 5px;"
-    mat-icon-button class=" example-icon favorite-icon " aria-label="Example icon-button with heart icon">
-    Cerrar sesión
-  </a>
+  
+  <a 
+    *ngIf="isLoggedIn"
+    (click)="logout()"
+    style="margin-right: 70px; width: 24px; height: 24px; font-size: 20px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;"
+    mat-icon-button class="example-icon favorite-icon" aria-label="Cerrar sesión">
+    <span class="material-icons">logout</span>
+    <span style="vertical-align: middle; margin-left: 8px;">Cerrar sesión</span>
+</a>
+
 </mat-toolbar>
 

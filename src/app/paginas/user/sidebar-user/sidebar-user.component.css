@@ -1,0 +1,10 @@
+.custom-card {
+    width: 250px; /* Ajusta el ancho según tus necesidades */
+    height: auto; /* Esto permitirá que la altura se ajuste automáticamente */
+  }
+  
+  /* Estilo para el texto del botón */
+  .mat-list-item .mat-line {
+    white-space: normal; /* Permite que el texto se rompa en varias líneas */
+    overflow: visible; /* Permite que el texto sobresalga del contenedor */
+  }

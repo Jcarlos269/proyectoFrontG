@@ -1,11 +1,19 @@
-<mat-card>
-  <mat-action-list>
-    <div mat-subheader>Categorías disponibles</div>
-    <button routerLink="/user-dashboard/home-user" mat-list-item>
-      <mat-icon mat-list-icon>quiz</mat-icon>Inicio
-    </button>
-    <button mat-list-item routerLink = "/user-dashboard/instructions-admin">
-      <mat-icon mat-list-icon>list</mat-icon>Aventura Sostenible
-    </button>
-  </mat-action-list>
+<mat-card class="custom-card">
+  <mat-card-content>
+    <mat-action-list>
+      <div mat-subheader>Categorías disponibles</div>
+      <button (click)="navigateTo('/user-dashboard/home-user')" mat-list-item>
+        <mat-icon mat-list-icon style="vertical-align: middle;">home</mat-icon> Inicio
+      </button>
+      <button (click)="navigateTo('/user-dashboard/memoryGame')" mat-list-item>
+        <mat-icon mat-list-icon style="vertical-align: middle;">memory</mat-icon> Juego de Memoria ODS
+      </button>
+      <button (click)="navigateTo('/user-dashboard/hangedGame')" mat-list-item>
+        <mat-icon mat-list-icon style="vertical-align: middle;">gesture</mat-icon> Juego de Ahorcado ODS
+      </button>
+      <button (click)="navigateTo('/user-dashboard/instructions-admin')" mat-list-item>
+        <mat-icon mat-list-icon style="vertical-align: middle;">explore</mat-icon> Aventura Sostenible
+      </button>
+    </mat-action-list>
+  </mat-card-content>
 </mat-card>
